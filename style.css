@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 
 	color: #333;
-	font: normal 16px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: normal 16px/18px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 section {
 	display: block;
@@ -22,33 +22,52 @@ section#splash {
 	background: url('background.png') white no-repeat center center;
 	background-size: cover;
 }
+div.background {
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8) url('stripe.png');
+	opacity: 0.6;
+}
 div.center {
 	position: absolute;
 	top: 50%; left: 50%;
-	width: 600px;
-	height: 132px;
-	margin-top: -98px; /* Half the height */
-	margin-left: -332px; /* Half the width */
-	padding: 32px;
+	z-index: 2;
+	width: 480px;
+	height: 284px;
+	margin-top: -142px; /* Half the height */
+	margin-left: -240px; /* Half the width */
 	color: #FFF;
 	text-align: center;
-	background: rgba(0, 0, 0, 0.4);
-	-webkit-border-radius: 24px;
-	-moz-border-radius: 24px;
-	border-radius: 24px;
 }
 div.center header {
 	display: block;
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: bold;
-	line-height: 40px;
+	line-height: 28px;
+	/*text-shadow:
+		black -2px -2px 0,
+		black  2px -2px 0,
+		black -2px  2px 0,
+		black  2px  2px 0;*/
+}
+div.center header span {
+	border-bottom: 2px solid white;
+	padding-bottom: 4px;
 }
 div.center .answer {
 	margin: 16px 0 0;
 	padding: 0;
-	font-size: 72px;
+	font-size: 240px;
 	font-weight: bold;
-	line-height: 76px;
+	line-height: 240px;
+	/*text-shadow:
+		#333 -2px -2px 0,
+		#333  2px -2px 0,
+		#333 -2px  2px 0,
+		#333  2px  2px 0;*/
 }
 
 section#scores {
@@ -123,9 +142,7 @@ section#scores a.item .score .metacritic {
 	height: 52px;
 
 	color: white;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 52px;
+	font: bold 24px/52px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align: center;
 
 	background: #F00;
@@ -138,14 +155,60 @@ section#reviews {
 	display: block;
 	padding: 0 192px 64px;
 }
+section#reviews a.item {
+	color: #777;
+	position: relative;
+}
+section#reviews a.item blockquote {
+	margin: 0 64px 16px;
+	font-style: italic;
+	font-size: 32px;
+	line-height: 44px;
+}
+section#reviews a.item cite {
+	display: block;
+	padding-right: 64px;
+	font-size: 24px;
+	text-align: right;
+}
+section#reviews a.item cite:before { content: '—  ';}
+section#reviews a.item blockquote:before { content: '" '; }
+section#reviews a.item blockquote:after { content: ' "'; }
 
 section#share {
 	display: block;
 	position: absolute;
 	top: 0; right: 0;
+	z-index: 3;
 	padding: 0 0 8px 8px;
 }
 section#share iframe {
 	display: block;
 	margin-top: 8px;
+}
+
+footer {
+	display: block;
+	padding: 48px 192px 32px;
+
+	color: #FFF;
+	background: #333;
+}
+footer a { color: inherit; }
+footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 16px;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.bold { font-weight: bold; }
+
+footer ul li + li { margin-top: 24px; }
+
+footer .note {
+	margin: 48px 0 0;
+	padding-left: 16px;
+	font-size: 26px;
 }
