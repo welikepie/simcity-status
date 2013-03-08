@@ -21,7 +21,7 @@ section#splash {
 	height: 100%;
 	background: url('background.png') white no-repeat center center;
 	background-size: cover;
-	border-bottom: 4px solid #999;
+	border-bottom: 8px solid #999;
 }
 div.background {
 	position: absolute;
@@ -232,7 +232,7 @@ section#share iframe {
 footer {
 	display: block;
 	position: relative;
-	padding: 48px 192px 32px;
+	padding: 128px 192px 128px;
 
 	color: #FFF;
 	background: black url('stripe2.png');
@@ -252,5 +252,5 @@ footer ul li + li { margin-top: 24px; }
 footer p { margin: 0 0 8px 16px; }
 footer .note {
 	color: #666;
-	font-size: 14px;
+	font-size: 13px;
 }
