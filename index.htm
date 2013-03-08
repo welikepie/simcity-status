@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Is SimCity playable?</title>
+		<title>Is SimCity playable now?</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic" type="text/css">
+
+		<meta property="og:title" content="Is SimCity playable now?">
+		<meta property="og:url" content="http://simcitystatus.com/">
+		<meta property="og:image" content="http://simcitystatus.com/background.jpg">
+		<meta name="description" content="Quickly check the status of SimCity servers, as well as the latest reviews scores on Amazon and Metacritic.">
+
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,400italic,700" type="text/css">
 		<link rel="stylesheet" href="style.css" type="text/css">
-
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-39132133-1']);
@@ -25,7 +29,7 @@
 			<div class="background"></div>
 			<div class="center">
 				<header><span>Is SimCity playable right now?</span></header>
-				<p class="answer">NO</p>
+				<p id="answer"></p>
 			</div>
 			<section id="share">
 				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsimcitystatus.com&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
@@ -44,7 +48,7 @@
 				</div>
 				<div class="score">
 					<p class="amazon">1/5</p>
-					<p class="note">average of 1206 customer reviews</p>
+					<p class="note">average of 1352 customer reviews</p>
 				</div>
 			</a>
 
@@ -55,7 +59,7 @@
 				</div>
 				<div class="score">
 					<p class="metacritic">1.6</p>
-					<p class="note">based on 2100 ratings</p>
+					<p class="note">based on 2225 ratings</p>
 				</div>
 			</a>
 		</section>
@@ -89,4 +93,17 @@
 			<p class="note">For more detailed information about server status, visit <a href="http://harding.ae/simstat/">http://harding.ae/simstat/</a></p>
 		</footer>
 	</body>
+	<script type="text/javascript" src="reqwest.min.js"></script>
+	<script type="text/javascript">
+	reqwest({
+		'url': 'status.php',
+		'method': 'get',
+		'type': 'text',
+		'success': function (resp) {
+			var answer = document.getElementById('answer');
+			answer.innerHTML = resp.response;
+			answer.className = 'loaded';
+		}
+	});
+	</script>
 </html>
