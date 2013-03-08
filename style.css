@@ -21,6 +21,7 @@ section#splash {
 	height: 100%;
 	background: url('background.png') white no-repeat center center;
 	background-size: cover;
+	border-bottom: 4px solid #999;
 }
 div.background {
 	position: absolute;
@@ -36,8 +37,8 @@ div.center {
 	top: 50%; left: 50%;
 	z-index: 2;
 	width: 480px;
-	height: 284px;
-	margin-top: -142px; /* Half the height */
+	height: 304px;
+	margin-top: -152px; /* Half the height */
 	margin-left: -240px; /* Half the width */
 	color: #FFF;
 	text-align: center;
@@ -81,9 +82,9 @@ div.center header span {
 div.center .answer {
 	margin: 16px 0 0;
 	padding: 0;
-	font-size: 240px;
+	font-size: 260px;
 	font-weight: bold;
-	line-height: 240px;
+	line-height: 260px;
 	opacity: 0;
 
 	-webkit-animation-name: fadein;
@@ -239,18 +240,17 @@ footer {
 footer a { color: inherit; }
 footer ul {
 	list-style: none;
-	margin: 0;
-	padding: 0 0 0 16px;
-	font-size: 24px;
-	line-height: 28px;
+	margin: 0 0 36px 16px;
+	padding: 0;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 .bold { font-weight: bold; }
 
 footer ul li + li { margin-top: 24px; }
-
+footer p { margin: 0 0 8px 16px; }
 footer .note {
-	margin: 48px 0 0;
-	padding-left: 16px;
-	font-size: 26px;
+	color: #666;
+	font-size: 14px;
 }
