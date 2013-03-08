@@ -1,0 +1,151 @@
+@charset 'utf-8';
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+	color: #333;
+	font: normal 16px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+section {
+	display: block;
+	position: relative;
+}
+section > p:first-child {
+	padding-left: 16px;
+}
+section#splash {
+	width: 100%;
+	height: 100%;
+	background: url('background.png') white no-repeat center center;
+	background-size: cover;
+}
+div.center {
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 600px;
+	height: 132px;
+	margin-top: -98px; /* Half the height */
+	margin-left: -332px; /* Half the width */
+	padding: 32px;
+	color: #FFF;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.4);
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+}
+div.center header {
+	display: block;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 40px;
+}
+div.center .answer {
+	margin: 16px 0 0;
+	padding: 0;
+	font-size: 72px;
+	font-weight: bold;
+	line-height: 76px;
+}
+
+section#scores {
+	display: block;
+	padding: 64px 192px;
+}
+section#scores a.item,
+section#reviews a.item {
+	display: block;
+	padding: 32px 16px;
+	overflow: hidden;
+
+	color: inherit;
+	text-decoration: none;
+}
+section#scores a.item:hover,
+section#scores a.item:focus,
+section#reviews a.item:hover,
+section#reviews a.item:focus {
+	background: #F5F5F5;
+}
+section#scores a.item + a.item,
+section#reviews a.item + a.item {
+	border-top: 1px dashed #999;
+}
+section#scores a.item .title {
+	display: block;
+	float: left;
+}
+section#scores a.item h1 {
+	margin: 0 0 16px;
+	font-size: 48px;
+	font-weight: normal;
+	line-height: 48px;
+}
+section#scores a.item h2 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 22px;
+}
+section#scores a.item .score {
+	display: block;
+	float: right;
+	text-align: right;
+}
+section#scores a.item .score > p:first-child {
+	display: block;
+	float: right;
+	height: 52px;
+	margin: 0 0 16px;
+}
+section#scores a.item .score p.note {
+	clear: right;
+	margin: 0;
+	color: #666;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+section#scores a.item .score .amazon {
+	width: 310px;
+	height: 52px;
+	overflow: hidden;
+	text-indent: 9999px;
+
+	background: url('amazon.png') no-repeat center center;
+}
+
+section#scores a.item .score .metacritic {
+	width: 52px;
+	height: 52px;
+
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 52px;
+	text-align: center;
+
+	background: #F00;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+}
+
+section#reviews {
+	display: block;
+	padding: 0 192px 64px;
+}
+
+section#share {
+	display: block;
+	position: absolute;
+	top: 0; right: 0;
+	padding: 0 0 8px 8px;
+}
+section#share iframe {
+	display: block;
+	margin-top: 8px;
+}
